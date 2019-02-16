@@ -1,4 +1,8 @@
-<h1>Player {{ playerId }}</h1>
+<h1>Player {{ playerId }} Score: {{ playerScore }}</h1>
+<div>
+  <input type="number" #score />
+  <button (click)="addScore(score.value)">Add score</button>
+</div>
 <table>
   <tr>
     <th>15</th>

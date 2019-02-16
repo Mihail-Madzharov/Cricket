@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+  ElementRef
+} from "@angular/core";
 
 @Component({
   selector: "app-sectors",
@@ -7,6 +15,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 })
 export class SectorsComponent {
   sectors = ["15_", "16_", "17_", "18_", "19_", "20_", "bullsEye_"];
+
+  public playerScore = 0;
+
+  @ViewChild("score")
+  inputScore: ElementRef;
 
   @Input()
   public playerId: string;
@@ -38,5 +51,10 @@ export class SectorsComponent {
     }
 
     this.endOfGame(this.canReset());
+  }
+
+  public addScore(score: string) {
+    this.playerScore += +score;
+    this.inputScore.nativeElement.value = null;
   }
 }
