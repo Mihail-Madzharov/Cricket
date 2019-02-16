@@ -1,6 +1,4 @@
-<h1>
-  {{ playerName }}
-</h1>
+<h1>Player {{ playerId }}</h1>
 <table>
   <tr>
     <th>15</th>
@@ -12,31 +10,199 @@
     <th>Bulls eye</th>
   </tr>
   <tr>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
+    <td>
+      <input
+        type="checkbox"
+        #input_15_1
+        (click)="setScore('15_1', input_15_1.checked)"
+        id="15_1"
+        [checked]="getElementValue('15_1')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_16_1
+        (click)="setScore('16_1', input_16_1.checked)"
+        id="16_1"
+        [checked]="getElementValue('16_1')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_17_1
+        (click)="setScore('17_1', input_17_1.checked)"
+        id="17_1"
+        [checked]="getElementValue('17_1')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_18_1
+        (click)="setScore('18_1', input_18_1.checked)"
+        id="18_1"
+        [checked]="getElementValue('18_1')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_19_1
+        (click)="setScore('19_1', input_19_1.checked)"
+        id="19_1"
+        [checked]="getElementValue('19_1')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_20_1
+        (click)="setScore('20_1', input_20_1.checked)"
+        id="20_1"
+        [checked]="getElementValue('20_1')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_bullsEye_1
+        (click)="setScore('bullsEye_1', input_bullsEye_1.checked)"
+        id="bullsEye_1"
+        [checked]="getElementValue('bullsEye_1')"
+      />
+    </td>
   </tr>
 
   <tr>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
+    <td>
+      <input
+        type="checkbox"
+        #input_15_2
+        (click)="setScore('15_2', input_15_2.checked)"
+        id="15_2"
+        [checked]="getElementValue('15_2')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_16_2
+        (click)="setScore('16_2', input_16_2.checked)"
+        id="16_2"
+        [checked]="getElementValue('16_2')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_17_2
+        (click)="setScore('17_2', input_17_2.checked)"
+        id="17_2"
+        [checked]="getElementValue('17_2')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_18_2
+        (click)="setScore('18_2', input_18_2.checked)"
+        id="18_2"
+        [checked]="getElementValue('18_2')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_19_2
+        (click)="setScore('19_2', input_19_2.checked)"
+        id="19_2"
+        [checked]="getElementValue('19_2')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_20_2
+        (click)="setScore('20_2', input_20_2.checked)"
+        id="20_2"
+        [checked]="getElementValue('20_2')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_bullsEye_2
+        (click)="setScore('bullsEye_2', input_bullsEye_2.checked)"
+        id="bullsEye_2"
+        [checked]="getElementValue('bullsEye_2')"
+      />
+    </td>
   </tr>
   <tr>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
-    <td><input type="checkbox" /></td>
+    <td>
+      <input
+        type="checkbox"
+        #input_15_3
+        (click)="setScore('15_3', input_15_3.checked)"
+        id="15_2"
+        [checked]="getElementValue('15_3')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_16_3
+        (click)="setScore('16_3', input_16_3.checked)"
+        id="16_2"
+        [checked]="getElementValue('16_3')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_17_3
+        (click)="setScore('17_3', input_17_3.checked)"
+        id="17_2"
+        [checked]="getElementValue('17_3')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_18_3
+        (click)="setScore('18_3', input_18_3.checked)"
+        id="18_2"
+        [checked]="getElementValue('18_3')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_19_3
+        (click)="setScore('19_3', input_19_3.checked)"
+        id="19_2"
+        [checked]="getElementValue('19_3')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_20_3
+        (click)="setScore('20_3', input_20_3.checked)"
+        id="20_2"
+        [checked]="getElementValue('20_3')"
+      />
+    </td>
+    <td>
+      <input
+        type="checkbox"
+        #input_bullsEye_3
+        (click)="setScore('bullsEye_3', input_bullsEye_3.checked)"
+        id="bullsEye_3"
+        [checked]="getElementValue('bullsEye_3')"
+      />
+    </td>
   </tr>
 </table>

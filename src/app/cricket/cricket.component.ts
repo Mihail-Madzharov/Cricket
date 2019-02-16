@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-cricket",
@@ -6,16 +6,20 @@ import { Component, OnInit, ViewChild, Input } from "@angular/core";
   styleUrls: ["./cricket.component.css"]
 })
 export class CricketComponent {
-  public playersNames = [];
+  public playersCount: Array<number> = new Array(3);
   public isPlaying = false;
-  @ViewChild("input")
-  input: any;
-  enterPlayers(playerName: string) {
-    this.input.nativeElement.value = "";
-    this.playersNames.push(playerName);
+  public endOfGame = false;
+
+  public endOfGameFunc = value => (this.endOfGame = value);
+
+  enterPlayers(playersCount: string) {
+    this.playersCount = new Array(+playersCount);
+    this.isPlaying = true;
   }
 
-  startTheGame() {
-    this.isPlaying = true;
+  resetTheGame() {
+    localStorage.clear();
+    this.endOfGame = false;
+    this.isPlaying = false;
   }
 }

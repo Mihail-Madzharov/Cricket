@@ -1,13 +1,16 @@
-<div *ngIf="!isPlaying">
+<div>
   <h1>Number of players</h1>
-  <p>
+  <p *ngIf="!isPlaying">
     <input type="text" #input />
-    <button (click)="enterPlayers(input.value)">Enter players</button>
+    <button (click)="enterPlayers(input.value)">Enter number of players</button>
   </p>
-  <p>{{ playersNames.length }} players add</p>
-  <button (click)="startTheGame()">Star the game</button>
 </div>
-<div *ngFor="let playerName of playersNames">
-  <app-sectors *ngIf="isPlaying" [playerName]="playerName"></app-sectors>
+<div *ngIf="isPlaying">
+  <div *ngFor="let playerName of playersCount; let i = index">
+    <app-sectors [playerId]="i + 1" [endOfGame]="endOfGameFunc"></app-sectors>
+  </div>
 </div>
-<div></div>
+<p></p>
+<div *ngIf="endOfGame">
+  <button (click)="resetTheGame()">Reset the game</button>
+</div>
