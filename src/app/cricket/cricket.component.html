@@ -1,11 +1,11 @@
 <div>
-  <h1>Number of players</h1>
-  <p *ngIf="!isPlaying && playersCount.length > 0">
+  <div *ngIf="playersCount.length === 0">
+      <h1>Number of players</h1>
     <input type="text" #input />
     <button (click)="enterPlayers(input.value)">Enter number of players</button>
-  </p>
+  </div>
 </div>
-<div *ngIf="isPlaying && playersCount.length > 0">
+<div *ngIf="playersCount.length">
   <div *ngFor="let playerName of playersCount; let i = index">
     <app-sectors [playerId]="i + 1" [endOfGame]="endOfGameFunc"></app-sectors>
   </div>

@@ -6,20 +6,23 @@ import { Component } from "@angular/core";
   styleUrls: ["./cricket.component.css"]
 })
 export class CricketComponent {
-  public playersCount: Array<number> = new Array(3);
-  public isPlaying = false;
+  public playersCount: Array<number> = new Array(0);
   public endOfGame = false;
 
   public endOfGameFunc = value => (this.endOfGame = value);
 
+  constructor() {
+    this.playersCount = new Array(+localStorage.getItem("playersCount"));
+  }
   enterPlayers(playersCount: string) {
     this.playersCount = new Array(+playersCount);
-    this.isPlaying = true;
+    localStorage.setItem("isPlaying", "true");
+    localStorage.setItem("playersCount", playersCount);
   }
 
   resetTheGame() {
     localStorage.clear();
     this.endOfGame = false;
-    this.isPlaying = false;
+    this.playersCount = new Array(0);
   }
 }
